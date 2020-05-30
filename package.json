@@ -1,0 +1,25 @@
+{
+  "name": "infinite-animal-crossing-lofi",
+  "version": "1.0.0",
+  "description": "### git workflow 1. (first time setup) pull the repository `git clone https://github.com/dryu99/infinite-animal-crossing-lofi.git` 2. checkout into a new branch `git checkout -b NAME-OF-BRANCH` 3. make your changes, go wild! 4. tell git to track your changes by doing `git add .` 5. save your changes and give it a meaningful name by doing `git commit -m \"describe your changes here\"` 6. double check to see what git is keeping track of by doing `git status` 7. push those changes up to github `git push origin NAME-OF-BRANCH` 8. go to github and make a pull request! 9. merge it into master",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack --config webpack.config.js",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dryu99/infinite-animal-crossing-lofi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dryu99/infinite-animal-crossing-lofi/issues"
+  },
+  "homepage": "https://github.com/dryu99/infinite-animal-crossing-lofi#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
