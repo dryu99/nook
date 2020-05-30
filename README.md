@@ -22,4 +22,5 @@
 4. how do i switch branches?
    1. `git checkout NAME-OF-BRANCH`
 
-   carmen
+carmen
+Maggie was here
