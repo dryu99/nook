@@ -28,7 +28,8 @@ audio.addEventListener('error', function(e) {
 
 // updates audio to use current hour
 function updateSrcWithHr() {
-    const hour = getCurrentHr()
+    // const hour = getCurrentHr()
+    const hour = 20
     const newSongId = findNewSongId(hour);
     setAudioSrc(hour, newSongId)
 } 
