@@ -1,5 +1,6 @@
 const time = document.getElementById('timeDisplay');
 const gradient = document.getElementById('gradient');
+const effectsLayer = document.getElementById('effectsLayer');
 
 function updateTime() {
     const now = new Date();
@@ -8,6 +9,12 @@ function updateTime() {
 
     const hours = now.getHours() + (now.getMinutes() / 60) + (now.getSeconds() / 3600)
     gradient.style.transform = `translateY(-${hours * 100}vh)`
+
+    function brightnessFunc(x) {
+        return 1 - Math.exp(-((x - 13) ** 4) / 4096)
+    }
+    
+    effectsLayer.style.opacity = brightnessFunc(hours)
 }
 
 export function startUpdatingClock() {
