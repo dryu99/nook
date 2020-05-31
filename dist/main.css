@@ -152,3 +152,30 @@ body {
     top: -4px;
     border-top-color: transparent
 }
+
+#names {
+    position: absolute;
+    bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+a {
+    color:#fff;
+    font-family: Lato;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+li {
+    padding: 0 1em;
+    display: inline-block
+}
