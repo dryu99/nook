@@ -21,6 +21,11 @@ body {
     justify-content: center;
 }
 
+#leaf {
+    height: 55px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
 #timeDisplay {
     color: #fff;
     font-family: Lato;
@@ -31,6 +36,7 @@ body {
     width: 3em;
     opacity: 1;
 }
+
 
 #togglePlay {
     border: none;
@@ -63,4 +69,35 @@ body {
 
 #completed {
     background-color: #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(500px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(500px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+  }
+}
+
+#stars {
+  transform: perspective(500px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 0;
+  perspective-origin: 50% 100%;
+  left: 50%;
+  animation: rotate 240s infinite linear;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background: #fffefa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0 -500px;
+  transform: translate3d(0, 0, -500px);
+  backface-visibility: hidden;
 }
