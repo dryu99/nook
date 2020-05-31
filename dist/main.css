@@ -21,6 +21,11 @@ body {
     justify-content: center;
 }
 
+#leaf {
+    height: 55px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
 #timeDisplay {
     color: #fff;
     font-family: Lato;
@@ -31,6 +36,7 @@ body {
     width: 3em;
     opacity: 1;
 }
+
 
 #togglePlay {
     border: none;
