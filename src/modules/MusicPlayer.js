@@ -28,8 +28,7 @@ audio.addEventListener('error', function(e) {
 
 // updates audio to use current hour
 function updateSrcWithHr() {
-    // const hour = getCurrentHr()
-    const hour = 20
+    const hour = getCurrentHr()
     const newSongId = findNewSongId(hour);
     setAudioSrc(hour, newSongId)
 } 
@@ -45,10 +44,10 @@ function setAudioSrc(hr, songId) {
 // generates new song id given the hour - format is ${hr}.${num btw 1-10}
 function findNewSongId(hr) {
     let lastSongPlayedId = songCache[hr];
-    let randomSongId = Math.ceil(Math.random() * 10)
+    let randomSongId = Math.ceil(Math.random() * 4)
     // don't play last played song num
     while (lastSongPlayedId && lastSongPlayedId === randomSongId) {
-        randomSongId = Math.ceil(Math.random() * 10)
+        randomSongId = Math.ceil(Math.random() * 4)
     }
 
     songCache[hr] = randomSongId;
