@@ -22,6 +22,10 @@ effectsAudio.addEventListener("play", () => {
     isEffectsPlaying = true;
 })
 
+effectsAudio.addEventListener("ended", () => {
+    effectsAudio.play()
+})
+
 setRainAudioSrc();
 
 export async function checkForRainSoundEffect() {
@@ -47,5 +51,7 @@ export function toggleEffectsIsPlaying() {
         effectsAudio.play();
     }
 }
+
+
 
 
