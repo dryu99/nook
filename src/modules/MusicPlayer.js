@@ -1,4 +1,5 @@
 import { getCurrentHr} from './Time'
+import { checkForRainSoundEffect } from './EffectsPlayer'
 
 // set global state
 let isPlaying = false
@@ -13,6 +14,10 @@ audio = document.getElementById("audio");
 audio.addEventListener("ended", () => {
     updateSrcWithHr()
     audio.play()
+})
+
+audio.addEventListener("play", () => {
+    checkForRainSoundEffect()
 })
 
 // update progress bar
@@ -60,6 +65,8 @@ export function toggleIsPlaying() {
     if (isPlaying) {
         playButton.innerText = "►"
         audio.pause()
+
+        effectsAudio.pause();
     } else {
         playButton.innerText = "❚❚"
         audio.play()
