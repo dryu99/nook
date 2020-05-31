@@ -35,7 +35,6 @@ function updateSrcWithHr() {
 
 // sets audio src with appropriate hour and song id
 function setAudioSrc(hr, songId) {
-    audio.pause()
     const audioSrc = document.getElementById("audioSrc")
     audioSrc.src = `music/${hr}/${songId}.mp3`
     audio.load()       
