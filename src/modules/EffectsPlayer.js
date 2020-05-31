@@ -12,16 +12,6 @@ function setRainAudioSrc() {
     effectsAudio.volume = 0.07;
 }
 
-effectsAudio.addEventListener("pause", () => {
-    effectsPlayButton.textContent = "please rain"
-    isEffectsPlaying = false;
-})
-
-effectsAudio.addEventListener("play", () => {
-    effectsPlayButton.textContent = "stahp rain"
-    isEffectsPlaying = true;
-})
-
 effectsAudio.addEventListener("ended", () => {
     effectsAudio.play()
 })
@@ -44,14 +34,14 @@ export async function checkForRainSoundEffect() {
     })    
 }
 
-export function toggleEffectsIsPlaying() {  
-    if (isEffectsPlaying) {
-        effectsAudio.pause();
-    } else {
-        effectsAudio.play();
-    }
+export function turnRainOn() {
+    effectsAudio.play();
+    isEffectsPlaying = true
 }
 
-
+export function turnRainOff() {
+    effectsAudio.pause();
+    isEffectsPlaying = false
+}
 
 
