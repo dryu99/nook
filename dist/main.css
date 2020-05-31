@@ -37,17 +37,6 @@ body {
     opacity: 1;
 }
 
-#ClickHere {
-    border-style: single;
-    border-radius: 5px;
-    border-color: #fff;
-    color: #fff;
-    border-style: double;
-    border-color: #fff;
-    font-family: Lato;
-    font-size: 15px;
-    padding: 0.5px 0.5vw;
-}
 
 #togglePlay {
     border: none;
