@@ -63,4 +63,5 @@ body {
 
 #completed {
     background-color: #fff;
+    transition: all ease 1s;
 }

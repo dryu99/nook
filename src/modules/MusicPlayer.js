@@ -22,8 +22,9 @@ audio.addEventListener("timeupdate", () => {
 })
 
 // sets new audio src if current one doesn't exist
-audio.addEventListener('error', function(e) {
-    updateSrcWithHr();
+audio.addEventListener('error', (e) => {
+    updateSrcWithHr()
+    audio.play()
 }, true);
 
 // updates audio to use current hour
@@ -37,7 +38,7 @@ function updateSrcWithHr() {
 function setAudioSrc(hr, songId) {
     const audioSrc = document.getElementById("audioSrc")
     audioSrc.src = `music/${hr}/${songId}.mp3`
-    audio.load()       
+    audio.load()
 }
 
 // generates new song id given the hour - format is ${hr}.${num btw 1-10}
