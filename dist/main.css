@@ -101,3 +101,54 @@ body {
   transform: translate3d(0, 0, -500px);
   backface-visibility: hidden;
 }
+
+#optionsMenu {
+    padding-top: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+#content {
+    height: 0;
+    overflow: hidden;
+    color: #fff;
+    font-family: Lato;
+    font-size: 1em;
+    transition: height ease 0.5s;
+}
+
+#content.isActive {
+    height: 4em;
+}
+
+#chevron{
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform ease 0.2s;
+}
+
+#chevron.isActive {
+    transform: scaleY(-1) translateY(5px);
+}
+
+#chevron:before,
+#chevron:after{
+    position:absolute;
+    display:block;
+    content:"";
+    border: 10px solid transparent
+}
+
+#chevron:before{
+    top: 0;
+    border-top-color:#fff
+}
+
+#chevron:after{
+    top: -4px;
+    border-top-color: transparent
+}
