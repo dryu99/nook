@@ -1,12 +1,21 @@
 body {
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#gradient {
+    z-index: -99;
+    position: absolute;
+    background-image: linear-gradient(180deg, rgba(41,21,62,1) 16%, rgba(101,116,137,1) 21%, rgba(191,182,170,1) 24%, rgba(234,215,157,1) 26%, rgba(242,235,218,1) 28%, rgba(208,215,226,1) 31%, rgba(185,207,235,1) 34%, rgba(101,130,175,1) 41%, rgba(165,184,206,1) 54%, rgba(136,157,182,1) 59%, rgba(114,114,136,1) 69%, rgba(142,136,155,1) 72%, rgba(211,194,189,1) 75%, rgba(249,216,154,1) 78%, rgba(248,199,133,1) 83%, rgba(41,21,62,1) 89%);
+    height: 2500vh;
+    width: 100vw;
 }
 
 .mainContainer {
-    background-color: #505066;
+    height: 100vh;
     padding: 0 35vw;
     text-align: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,15 +27,22 @@ body {
     font-size: 75px;
 }
 
+#hoverWrapper:hover > #flexContainer > #togglePlay {
+    width: 3em;
+    opacity: 1;
+}
+
 #togglePlay {
     border: none;
     border-radius: 5px;
-    width: 5em;
+    width: 0em;
+    opacity: 0;
     outline: none;
     background-color: #00000000;
     color: #fff;
     cursor: pointer;
     font-size: 2em;
+    transition: width ease 0.5s, opacity ease 0.5s;
 }
 
 #flexContainer {
