@@ -7,8 +7,7 @@ function updateTime() {
     const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit',hour12: true }).replace("AM", "").replace("PM", "")
     time.innerText = timeString
 
-    // const hours = now.getHours() + (now.getMinutes() / 60) + (now.getSeconds() / 3600)
-    const hours = 5
+    const hours = now.getHours() + (now.getMinutes() / 60) + (now.getSeconds() / 3600)
     gradient.style.transform = `translateY(-${hours * 100}vh)`
 
     function brightnessFunc(x) {
