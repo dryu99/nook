@@ -14,10 +14,8 @@ body {
 
 .mainContainer {
     height: 100vh;
-    overflow: hidden;
     padding: 0 35vw;
     text-align: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,15 +27,22 @@ body {
     font-size: 75px;
 }
 
+#hoverWrapper:hover > #flexContainer > #togglePlay {
+    width: 3em;
+    opacity: 1;
+}
+
 #togglePlay {
     border: none;
     border-radius: 5px;
-    width: 5em;
+    width: 0em;
+    opacity: 0;
     outline: none;
     background-color: #00000000;
     color: #fff;
     cursor: pointer;
     font-size: 2em;
+    transition: width ease 0.5s, opacity ease 0.5s;
 }
 
 #flexContainer {
